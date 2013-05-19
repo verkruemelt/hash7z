@@ -1,5 +1,5 @@
 @ECHO OFF
-SET source="C:\Users\"
+SET source="C:\Users"
 SET backup="D:\backup\profiles"
 SET prefix=""
 SET suffix=""
