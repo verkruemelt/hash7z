@@ -9,10 +9,12 @@ SET "fast=-mx3 -md=1m -mfb=32 -ms=128m"
 SET "normal=-mx5 -md=16m -mfb=32 -ms=2g"
 SET "maximum=-mx7 -md=32m -mfb=64 -ms=4g"
 SET "ultra=-mx9 -md=64m -mfb=64 -ms=4g"
+REM %fastest% %fast% %normal% %maximum% %ultra%
+SET compress=%fastest%
+REM crc32 ed2k md4 md5 sha1
 SET alg=crc32
 SET index=hash\index.%alg%
 SET check=hash\check.%alg%
-SET compress=%fastest%
 IF %processor_architecture% == x86 (SET hash=bin\%alg%sum.exe)
 IF %processor_architecture% == AMD64 (SET hash=bin\%alg%sum64.exe)
 TITLE hash7z - %source% ^> %backup%
